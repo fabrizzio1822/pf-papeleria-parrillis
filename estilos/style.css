@@ -1,0 +1,498 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 0fr 0fr 1.5fr 0.5fr 1fr 0.5fr 0fr;
+    grid-template-areas:
+     "logo logo logo logo"
+     "barra barra barra barra"
+     "principal principal principal principal"
+     "servicios servicios servicios servicios"
+     "productos productos productos productos"
+     "form form form form"
+     "footer footer footer footer";
+}
+
+/** logo **/
+
+.logo{
+    grid-area: logo;
+    display:flex;
+    justify-content: center;
+}
+
+.img-logo{
+    width: 125px;
+    height: 125px;
+}
+
+/** barra de navegacion **/
+
+.barra-nav{
+    grid-area: barra;
+    display: flex;
+    background-color: #ff4500;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.opciones{
+    margin-top: 20px;
+    display: flex;  
+    text-align: center;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.opciones li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+/** seccion hero **/
+
+.principal{
+    grid-area: principal;
+}
+
+.carrusel-principal{
+    top: 0;
+    margin-top: 400px;
+    font-size: 1.5rem;
+    background-color: rgba(95, 27, 50, 0.5);
+    height: 200px;
+}
+
+.carrusel-principal-enlace{
+    background-color: #9A0101;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    transition: background-color 1s;
+}
+
+.imagen__carrusel__principal{
+    display: block;
+}
+
+/** Servicios **/
+
+.servicios{
+    grid-area: servicios;
+    padding-top: 30px;
+}
+
+.servicios-titulo{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #ff4500;
+}
+.servicios-img{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    text-align: center;
+    color: #ff0e00;
+    font-size: 20px;
+}
+
+.img-servicio{
+    max-width: 75px;
+    padding: 10px;
+    border-bottom: solid 2px #ff4500;
+}
+
+/** Productos mas vendidos **/
+
+.mas-vendidos{
+    grid-area: productos;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.mas-vendidos-titulo{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: #ff4500;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.mas-vendidos-colum{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mas-vendido-colum-card{
+    background: #ff4500;
+    text-align: center;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.img-mas-vendido{
+    width: 350px;
+    height: 300px;
+    border: solid 5px #ff4500;
+    border-radius: 30px;
+}
+
+.mas-vendido-colum-card-boton{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mas-vendido-colum-card-boton a{
+    background-color: #e44611;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 1s;
+}
+
+/** formulario **/
+
+.formulario{
+    grid-area: form;
+}
+.form-datos{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff4500;
+    padding: 30px;
+}
+
+.titulo-formulario{
+    font-size: 20px;
+    color: #fff;
+}
+
+.datos {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+
+.datos div input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.datos div label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #9A0101;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/** footer **/
+footer {
+    grid-area: footer;
+    display: inline-block;
+    width: 100%;
+    text-align: center; 
+}
+
+.footer-texto {
+    color: #ff4500;
+    font-size: 20px;
+}
+
+.img-footer {
+    max-width: 50px;
+    padding: 20px;
+}
+
+.footer-editado-boostrap img{
+    max-width: 100px;
+}
+/** ------------- ESTILOS PRODUCTOS --------------- **/
+
+.secciones{
+   text-align: center;
+
+}
+
+.imagenes-secciones{
+    width: 100%;
+    vertical-align: middle;
+    margin: auto;
+    display: inline-block;
+
+}
+
+.imagenes-secciones img{
+    width: 100%; 
+    height: auto; 
+    max-width: 900px;
+    border-radius: 20px;
+    margin: 20px; 
+    transition: transform 0.3s ease;
+}
+
+/** ------------- ESTILOS NOSOTROS --------------- **/
+
+.seccion-historia{
+   font-size: 1.5rem;
+   text-align: center;
+   width: 80%;
+   margin: auto;
+   color: #5f1b32; 
+}
+
+/** -------------- ESTILOS AYUDA ----------------- **/ 
+.seccion-ayuda{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.seccion-ayuda h1{
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    color: #9A0101;
+}
+
+.seccion-ayuda-texto{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.seccion-ayuda-texto-introduccion{
+    font-size: 1.3rem;
+    text-align: center;
+    width: 50%;
+    color: #9A0101;
+}
+
+.seccion-ayuda-texto-enlaces{
+    width: 20%;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: #e44611;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+    color: #fff;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.seccion-ayuda-texto-enlaces a{
+    background-color: #5f1b32;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 1s;
+}
+
+
+/** ------------- ESTILOS CARRITO --------------- **/
+
+.carrito h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.carrito-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carrito-container-izquierda{
+    text-align: center;
+    background-color: #e44611;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.carrito-container-izquierda img{
+    max-width: 300px;
+    border-radius: 30px;
+    border: #e44611 solid 2px;
+}
+
+.carrito-container-izquierda-boton{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carrito-container-izquierda-boton button{
+    border: none;
+    background-color: #9A0101;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    transition: background-color 1s;
+}
+
+.carrito-container-derecha{
+    display: flex;
+    flex-direction: column;
+    border: #e44611 solid 2px;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.carrito-container-derecha h3{
+    text-align: center;
+    margin-bottom: 0;
+    flex-grow: 1; 
+}
+
+.carrito-botones{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.carrito-botones button{
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    background-color: #5f1b32;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 1s;
+}
+
+.carrito-botones button a{
+    text-decoration: none;
+    color: #fff;
+}
+/** Hover **/
+
+.opciones li a:hover{
+    color: #9A0101;
+}
+
+.mas-vendido-colum-card-boton a:hover{
+    background-color: #9A0101;
+}
+
+.button:hover {
+    background-color: #9a010191;
+}
+
+.seccion-ayuda-texto-enlaces a:hover{
+    background-color: #9A0101;
+}
+
+.carrito-container-izquierda-boton button:hover{
+    background-color: #5f1b32;
+}
+
+.carrito-botones button:hover{
+    background-color: #9A0101;
+}
+
+.carrusel-principal-enlace:hover{
+    background-color: #e44611;
+}
+
+.imagenes-secciones img:hover {
+    transform: scale(1.1);
+}
+
+/** ------------------ MEDIAS ------------------- **/
+
+/** TABLET **/
+
+@media only screen and (min-width:769px) and (max-width:1200px){
+    
+    .grid-container{
+        display: none;
+    }
+
+    .mas-vendidos-colum{
+       display: inline-block;
+    }
+
+    .imagenes-secciones img{
+        max-width: 80%;
+    }
+
+    .footer-editado-boostrap img{
+        max-width: 10%;
+    }
+
+    .seccion-ayuda-texto-enlaces{
+        width: 30%;
+        padding: 20px 20px;
+    }
+}
+
+
+/** MOBILE **/
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .barra-nav ul li a{
+         font-size: 80%;
+    }
+    
+    .imagenes-secciones img{
+        max-width: 70%;
+    }
+
+    .footer-editado-boostrap img{
+        max-width: 20%;
+    }
+
+    .seccion-ayuda{
+        margin-right: 40px;
+    }
+    .seccion-ayuda h1{
+        font-size: 180%;
+    }
+
+    .seccion-ayuda-texto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .seccion-ayuda-texto-introduccion{
+        font-size: 90%;
+        width: 70%;
+    }
+
+    .seccion-ayuda-texto-enlaces{
+        width: 70%;
+        font-size: 90%;
+
+    }
+} 
