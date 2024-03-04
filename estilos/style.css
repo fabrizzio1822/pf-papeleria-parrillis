@@ -1,7 +1,9 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Protest Riot", sans-serif;
+    font-style: normal;
+      
 }
 
 .grid-container{
@@ -20,15 +22,10 @@ body{
 
 /** logo **/
 
-.logo{
-    grid-area: logo;
-    display:flex;
-    justify-content: center;
-}
 
 .img-logo{
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 200px;
 }
 
 /** barra de navegacion **/
@@ -36,13 +33,14 @@ body{
 .barra-nav{
     grid-area: barra;
     display: flex;
-    background-color: #ff4500;
+    justify-content: space-evenly;
+    background-color: #E31B1B;
     width: 100%;
-    margin-top: 30px;
+    height: 145px;
 }
 
 .opciones{
-    margin-top: 20px;
+    margin-left: -40px;
     display: flex;  
     text-align: center;
     width: 100%;
@@ -50,65 +48,155 @@ body{
     list-style: none;
 }
 
+.opciones-lista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    height: 160px;
+}
+
+.opciones-lista-nosotros a{
+    padding-inline: 21px;
+}
+
+.opciones-lista-ayuda a{
+    padding-inline: 32px;
+}
+
+.opciones-lista-carrito a{
+    padding-inline: 26px;
+}
+
 .opciones li a{
     text-decoration: none;
     color: #fff;
     font-size: 22px;
+    width: 100%;
+}
+
+.opciones-backround{
+    background-color: #FF8C1D;
+    border-radius: 30px;
+    padding:5px 15px;
 }
 
 /** seccion hero **/
-
-.principal{
-    grid-area: principal;
+.banner-container {
+    position: relative;
+    width: 100%;
 }
 
-.carrusel-principal{
-    top: 0;
-    margin-top: 400px;
-    font-size: 1.5rem;
-    background-color: rgba(95, 27, 50, 0.5);
-    height: 200px;
+.carrousel-texto-papeleria {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 
-.carrusel-principal-enlace{
-    background-color: #9A0101;
+.carrousel-texto-jugueteria{
+    width: 50%;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.carrousel-texto-papeleria h1{
+    font-size: 100px;
+    color: #9A0101;
+    text-shadow: 5px 10px 15px #fff;
+}
+
+.carrousel-texto-papeleria h2 strong,
+.carrousel-texto-papeleria h3 strong,
+.carrousel-texto-papeleria h4 strong{
+    text-shadow: 5px 10px 5px #9A0101;
+}
+
+.carrousel-texto-papeleria button{
     text-decoration: none;
-    border-radius: 20px;
-    padding: 10px 20px;
     color: #fff;
-    transition: background-color 1s;
+    background-color: #9A0101;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-.imagen__carrusel__principal{
-    display: block;
+.carrousel-texto-jugueteria h1{
+    text-decoration: double;
+    font-size: 100px;
+    color: #5f1b32;
+    text-shadow: 0px 0px 20px #fff;
+}
+
+.carrousel-texto-jugueteria h2 strong,
+.carrousel-texto-jugueteria h3 strong,
+.carrousel-texto-jugueteria h4 strong{
+    text-shadow: 5px -5px 5px #5f1b32;
+}
+
+.carrousel-texto-jugueteria button{
+    text-decoration: none;
+    color: #fff;
+    background-color: #5f1b32;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.contenedor-backround-lapices{
+    background-image: url(/imagenes/fondo-mas-vendidos1.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 1000px; 
+    width: 100%; 
 }
 
 /** Servicios **/
 
 .servicios{
     grid-area: servicios;
-    padding-top: 30px;
 }
 
 .servicios-titulo{
+    padding: 40px 0px;
     width: 100%;
     text-align: center;
-    font-size: 20px;
-    color: #ff4500;
+    font-size: 30px;
+    color: #e44611;
 }
+
 .servicios-img{
     display: flex;
-    justify-content: space-between;
-    padding: 30px 100px;
+    justify-content: center;
+    gap: 40px;
     text-align: center;
-    color: #ff0e00;
+    color: #fff;
     font-size: 20px;
 }
 
+.servicios-img div{
+    width: 15%;
+    height: 250px; 
+    border-radius: 30px;
+    color: black;
+}
+
 .img-servicio{
-    max-width: 75px;
+    background: linear-gradient(#F80505, #FF7B36);
+    max-width: 210px;
     padding: 10px;
-    border-bottom: solid 2px #ff4500;
+    border-radius: 30px;
 }
 
 /** Productos mas vendidos **/
@@ -122,8 +210,6 @@ body{
 .mas-vendidos-titulo{
     text-align: center;
     font-size: 20px;
-    color: #fff;
-    background-color: #ff4500;
     margin-bottom: 20px;
     padding: 30px;
 }
@@ -164,16 +250,68 @@ body{
     transition: background-color 1s;
 }
 
+/** marcas **/
+
+.marcas{
+    padding-top: 50px;
+    text-align: center;
+    background-color: #c7c7c7;
+}
+
+.marcas h2{
+    color: #5f1b32;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.marcas-logos{
+    padding-bottom: 30px;
+}
+
+.marcas-logos img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease; 
+}
+
+.marcas-logos-papeleria{
+    width: 100%;
+}
+
+.marcas-logos-papeleria img{
+    max-width: 11%;
+}
+
+.marcas-logos-jugueteria{
+    width: 100%;
+}
+
+.marcas-logos-jugueteria img{
+    max-width: 11%;
+}
+
+
 /** formulario **/
 
 .formulario{
     grid-area: form;
-}
-.form-datos{
     display: flex;
-    justify-content: space-around;
-    background-color: #ff4500;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.formulario-imagen{
     padding: 30px;
+    text-align: center;
+    height: 300px;
+}
+
+.formulario-imagen p{
+    font-size: 20px;
+}
+
+.formulario-imagen img{
+    max-width: 200px;
 }
 
 .titulo-formulario{
@@ -187,6 +325,9 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 20%;
+    height: 300px;
+    background-color: #9A0101;
+    
 }
 
 .datos div input{
@@ -237,28 +378,69 @@ footer {
 }
 /** ------------- ESTILOS PRODUCTOS --------------- **/
 
-.secciones{
-   text-align: center;
-
+.contenedor-productos-aside{
+    background-color: #fff;
+    position: fixed;
+    top: 20%; 
+    left: 20px; 
+    z-index: 1000;
 }
 
-.imagenes-secciones{
-    width: 100%;
-    vertical-align: middle;
-    margin: auto;
-    display: inline-block;
-
+.imagen-productos{
+    max-width: 200px;
+    margin-left: 30px;
 }
 
-.imagenes-secciones img{
-    width: 100%; 
-    height: auto; 
-    max-width: 900px;
+.boton-aside{
+    border: none;
     border-radius: 20px;
-    margin: 20px; 
-    transition: transform 0.3s ease;
+    padding: 10px;
+    background-color: #9A0101;
+    color: #fff;
+    margin: 10px 40px;
 }
 
+.buscador input{
+    border-radius: 20px;
+    border: solid 1px #5f1b32;
+}
+
+.productos-fila-uno {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.productos-fila-uno .mas-vendido-colum-card {
+    width: 26%;
+    background-color: #5f1b32;
+}
+
+.mas-vendidos-colum-productos {
+    float: right;
+}
+
+.productos-fila-uno {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 300px;
+}
+
+.mas-vendido-colum-card-productos{
+    margin-bottom: 20px;
+}
+
+.mas-vendido-colum-card-productos figure img{
+    margin-top: -5px;
+    max-width: 330px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.mas-vendido-colum-card-productos figure figcaption div a{
+    background-color: #9A0101;
+}
 /** ------------- ESTILOS NOSOTROS --------------- **/
 
 .seccion-historia{
@@ -273,6 +455,10 @@ footer {
 .seccion-ayuda{
     margin-top: 50px;
     margin-left: 50px;
+}
+
+.imagen-contactame{
+    max-width: 300px;
 }
 
 .seccion-ayuda h1{
@@ -298,13 +484,17 @@ footer {
     width: 20%;
     text-align: center;
     font-size: 1.3rem;
+    color: #fff;
+}
+
+.container-contactame{
+    padding: 20px 0;
     background-color: #e44611;
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 2);
-    color: #fff;
-    margin: auto;
-    padding: 50px 0;
+    height: 200px;
 }
+
 
 .seccion-ayuda-texto-enlaces a{
     background-color: #5f1b32;
@@ -375,7 +565,8 @@ footer {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .carrito-botones button{
@@ -421,6 +612,10 @@ footer {
 
 .carrusel-principal-enlace:hover{
     background-color: #e44611;
+}
+
+.marcas-logos img:hover {
+    filter: grayscale(0%);
 }
 
 .imagenes-secciones img:hover {
