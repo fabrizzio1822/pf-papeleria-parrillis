@@ -16,13 +16,7 @@ El proyecto está organizado de la siguiente manera:
 
 - **Animaciones con AOS:** Se han agregado animaciones utilizando la biblioteca AOS (Animate On Scroll), lo que proporciona efectos visuales dinámicos al desplazarse por la página.
 
-## Cómo Ejecutar
 
-Para ejecutar este proyecto localmente, sigue estos pasos:
-
-1. Descarga o clona el repositorio en tu máquina local.
-2. Abre el archivo HTML correspondiente a la sección que deseas visualizar en tu navegador web preferido.
-
-## Créditos
+## Final
 
 Este proyecto forma parte de la penúltima entrega de un proyecto educativo o práctico, donde se han aplicado conocimientos de HTML, CSS, SCSS, Bootstrap y animaciones con AOS.
