@@ -1,0 +1,66 @@
+.img-logo {
+    width: 150px;
+    height: 200px;
+}
+
+.barra-nav {
+    grid-area: barra;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #E31B1B;
+    width: 100%;
+    height: 145px;
+}
+
+.opciones {
+    margin-left: -40px;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+
+    li {
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 22px;
+            width: 100%;
+        }
+    }
+
+    .opciones-lista {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        height: 160px;
+
+        a {
+            .opciones-backround {
+                background-color: #FF8C1D;
+                border-radius: 30px;
+                padding: 5px 15px;
+            }
+        }
+
+        .opciones-lista-nosotros a {
+            padding-inline: map-get($paddings-navbar, nosotros);
+        }
+
+        .opciones-lista-ayuda a {
+            padding-inline: map-get($paddings-navbar, ayuda);
+        }
+
+        .opciones-lista-carrito a {
+            padding-inline: map-get($paddings-navbar, carrito);
+        }
+    }
+}
+
+.opciones-backround {
+    background-color: #FF8C1D;
+    border-radius: 30px;
+    padding: 5px 15px;
+}

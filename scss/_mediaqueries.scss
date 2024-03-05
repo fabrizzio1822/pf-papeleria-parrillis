@@ -1,0 +1,148 @@
+@media only screen and (min-width:769px) and (max-width:1200px){
+    
+    .grid-container{
+        display: none;
+    }
+
+    .servicios .servicios-img{
+        width: 94%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .mas-vendidos-colum-card{
+        max-width: calc(50% - 30px);
+    }
+
+    .img-mas-vendido{
+        max-width: 60%;
+        height: auto;
+    }
+
+    .imagenes-secciones img{
+        max-width: 80%;
+    }
+
+    .datos {
+        width: 50%;
+    }
+
+    .footer-texto{
+        margin-top: 100px
+    }
+
+    .footer-editado-boostrap img{
+        max-width: 10%;
+    }
+
+    .seccion-ayuda-texto-enlaces{
+        width: 30%;
+        padding: 20px 20px;
+    }
+
+    .img-mas-vendido {
+        width: 90%;
+    }
+
+    .img-servicio{
+        max-width: 90%;
+    }
+}
+
+
+/** MOBILE **/
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .barra-nav ul li a{
+         font-size: 80%;
+    }
+    
+    .imagenes-secciones img{
+        max-width: 70%;
+    }
+
+    .footer-editado-boostrap img{
+        max-width: 20%;
+    }
+
+    .seccion-ayuda{
+        margin-right: 40px;
+    }
+    .seccion-ayuda h1{
+        font-size: 180%;
+    }
+
+    .seccion-ayuda-texto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .seccion-ayuda-texto-introduccion{
+        font-size: 90%;
+        width: 70%;
+    }
+
+    .seccion-ayuda-texto-enlaces{
+        width: 70%;
+        font-size: 90%;
+
+    }
+
+    .grid-container{
+        display: none;
+    }
+
+    .servicios .servicios-img{
+        width: 94%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .mas-vendidos-colum-card{
+        max-width: calc(50% - 30px);
+    }
+
+    .img-mas-vendido{
+        max-width: 60%;
+        height: auto;
+    }
+
+    .imagenes-secciones img{
+        max-width: 80%;
+    }
+
+    .datos {
+        width: 50%;
+    }
+
+    .footer-texto{
+        margin-top: 100px
+    }
+
+    .footer-editado-boostrap img{
+        max-width: 10%;
+    }
+
+    .seccion-ayuda-texto-enlaces{
+        width: 30%;
+        padding: 20px 20px;
+    }
+
+    .img-mas-vendido {
+        width: 90%;
+    }
+
+    .img-servicio{
+        max-width: 90%;
+    }
+} 

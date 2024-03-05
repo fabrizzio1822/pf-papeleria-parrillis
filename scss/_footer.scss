@@ -1,0 +1,22 @@
+footer {
+    grid-area: footer;
+    display: inline-block;
+    width: 100%;
+    text-align: center; 
+    .footer-texto {
+        color: #ff4500;
+        font-size: 20px;
+    }
+    .img-footer {
+        max-width: 50px;
+        padding: 20px;
+    }
+    .footer-editado-boostrap img{
+        max-width: 100px;
+    }
+}
+
+
+
+
+

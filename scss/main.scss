@@ -1,0 +1,34 @@
+// CONTIENE MI MENU PRINCIPAL
+
+//reset
+@import "./reset/vars";
+@import "./reset/reset";
+
+@import "./reset/mixin";
+
+@import "./reset/layout";
+
+//estructura
+@import "header";
+@import "principal";
+@import "servicios";
+@import "vendidos";
+@import "marcas";
+@import "formulario";
+@import "footer";
+
+
+//paginas
+
+@import "./producto/aside";
+@import "./producto/productos";
+
+@import "./nosotros/nosotros";
+
+@import "./ayuda/ayuda";
+
+@import "./carrito/carrito";
+
+// media queries
+
+@import "mediaqueries";

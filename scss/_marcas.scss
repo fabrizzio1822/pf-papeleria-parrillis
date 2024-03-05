@@ -1,0 +1,29 @@
+.marcas{
+    padding-top: 50px;
+    text-align: center;
+    background-color: #c7c7c7;
+    h2{
+        color: #5f1b32;
+        font-size: 40px;
+        font-style: italic;
+    }
+    .marcas-logos{
+        padding-bottom: 30px;
+        img {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease; 
+        }
+        .marcas-logos-papeleria{
+            width: 100%;
+            img{
+                max-width: 11%;
+            }
+        }
+        .marcas-logos-jugueteria{
+            width: 100%;
+            img{
+                max-width: 11%;
+            }
+        }
+    }
+}

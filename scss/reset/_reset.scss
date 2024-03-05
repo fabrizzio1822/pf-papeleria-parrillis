@@ -1,0 +1,13 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 0fr 0fr 1.5fr 0.5fr 1fr 0.5fr 0fr;
+    grid-template-areas:
+     "logo logo logo logo"
+     "barra barra barra barra"
+     "principal principal principal principal"
+     "servicios servicios servicios servicios"
+     "productos productos productos productos"
+     "form form form form"
+     "footer footer footer footer";
+}
