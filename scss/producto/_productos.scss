@@ -1,10 +1,9 @@
 
 .productos-fila-uno {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     margin-top: 40px;
     margin-left: 300px;
+    @include display(flex,space-evenly);
     .mas-vendido-colum-card {
         width: 26%;
         background-color: #5f1b32;

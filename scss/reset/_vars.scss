@@ -3,17 +3,5 @@ $color-fondo-img: linear-gradient(#F80505, #FF7B36);
 $ancho-img: 15%;
 $altura-img: 250px;
 $border-radius-img: 30px;
-
-
-$paddings-navbar:(
-    nosotros: 21px,
-    ayuda:32px,
-    carrito: 26px
-);
-
-@each $enlace,$padding in $paddings-navbar{
-    k__#{$enlace}{
-        padding-inline:$padding 
-    }
-}
-
+$color-botones: #ffffff;
+$color-bordo: #9A0101;

@@ -1,74 +1,53 @@
-
-
 .banner-container {
     position: relative;
     width: 100%;
-
     .carrousel-texto-papeleria {
         position: absolute;
-        top: 45%;
-        left: 35%;
-        transform: translate(-50%, -50%);
+        @include posicion(25%,20%);
         text-align: center;
         color: white;
-
         h1 {
             font-size: 100px;
-            color: #9A0101;
+            color: $color-bordo;
             text-shadow: 5px 10px 15px #fff;
         }
-
         h2 strong,
         h3 strong,
         h4 strong {
-            text-shadow: 5px 10px 5px #9A0101;
+            text-shadow: 5px 10px 5px $color-bordo;
         }
-
-        button {
+        a {
             text-decoration: none;
-            color: #fff;
-            background-color: #9A0101;
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: none;
+            color: $color-botones;
+            background-color: $color-bordo;
             font-size: 20px;
             margin-top: 20px;
-            @include sizes(200px, 50px);
+            @include border(10px 20px,none,20px);
         }
     }
-
     .carrousel-texto-jugueteria {
         width: 50%;
         position: absolute;
-        top: 45%;
-        left: 65%;
-        transform: translate(-50%, -50%);
+        @include posicion(25%,40%);
         text-align: center;
         color: white;
-
         h1 {
             text-decoration: double;
             font-size: 100px;
             color: #5f1b32;
             text-shadow: 0px 0px 20px #fff;
         }
-
         h2 strong,
         h3 strong,
         h4 strong {
             text-shadow: 5px -5px 5px #5f1b32;
         }
-
-        button {
+        a{
             text-decoration: none;
-            color: #fff;
+            color: $color-botones;
             background-color: #5f1b32;
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: none;
             font-size: 20px;
-            margin-top: 20px;
-            @include sizes(150px, 40px); 
+            @include border(10px 20px, none, 20px);
         }
     }
 }

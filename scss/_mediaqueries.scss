@@ -1,148 +1,422 @@
 @media only screen and (min-width:769px) and (max-width:1200px){
     
-    .grid-container{
-        display: none;
-    }
-
-    .servicios .servicios-img{
-        width: 94%;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 20px;
-        text-align: center;
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .mas-vendidos-colum-card{
-        max-width: calc(50% - 30px);
-    }
-
-    .img-mas-vendido{
-        max-width: 60%;
+    .img-logo{
+        max-width: 80%;
         height: auto;
     }
-
-    .imagenes-secciones img{
-        max-width: 80%;
-    }
-
-    .datos {
-        width: 50%;
-    }
-
-    .footer-texto{
-        margin-top: 100px
-    }
-
-    .footer-editado-boostrap img{
-        max-width: 10%;
-    }
-
-    .seccion-ayuda-texto-enlaces{
-        width: 30%;
-        padding: 20px 20px;
-    }
-
-    .img-mas-vendido {
-        width: 90%;
-    }
-
-    .img-servicio{
-        max-width: 90%;
-    }
-}
-
-
-/** MOBILE **/
-
-@media only screen and (min-width:320px) and (max-width:768px){
     .barra-nav ul li a{
-         font-size: 80%;
+         font-size: 60%;
     }
-    
-    .imagenes-secciones img{
-        max-width: 70%;
+    .opciones-lista-nosotros{
+        margin-left: 20px ;
     }
-
+    .opciones-lista-ayuda{
+        margin-right: 20px;
+    }
+    .carrousel-texto-estilo h1 strong{
+        font-size: 40%;
+    }
+    .carrousel-texto-papeleria{
+        position: static;
+        margin-right: 300px;
+        margin-top: -90px;
+        width: 70%;
+        h1 strong{
+            font-size: 20%;
+        }
+        h2 strong,
+        h3 strong,
+        h4 strong{
+            font-size: 40%;
+            text-shadow: none;
+        }
+        a{
+            font-size: 20%;
+        }
+    }
+    .contenedor-backround-lapices{
+        @include sizes(100%,800px);
+    }
+    .servicios {
+        .servicios-img {
+            font-size: 3vw;
+            .img-servicio {
+                max-width: 130%;
+            }
+        }
+    }
+    .mas-vendidos{
+        .mas-vendidos-titulo{
+            font-size: 2.5vw;
+        }
+        .mas-vendidos-colum{
+            .mas-vendido-colum-card{
+                font-size: 2vw;
+                figure{
+                    .img-mas-vendido{
+                        @include sizes(100px,100px);
+                    }
+                    figcaption{
+                        h4{
+                            font-size: 2.5vw
+                        }
+                        .mas-vendido-colum-card-boton{
+                            a{
+                                font-size: 1.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .formulario{
+        .formulario-imagen{
+            height: 200px;
+            p{
+                font-size: 3vw;
+            }
+            img{
+                max-width: 150px;
+            }
+        }
+        .datos {
+            @include sizes(40%,300px);
+            .titulo-formulario{
+                font-size: 2vw;
+            }
+            div{
+                input{
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+                label {
+                    font-size: 2.5vw;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .button {
+                    font-size: 2vw;
+                }
+            }
+        }
+    } 
+    footer {
+        .footer-texto {
+            font-size: 3vw;
+        }
+        .footer-editado-boostrap img{
+            max-width: 70px;
+        }
+    }
     .footer-editado-boostrap img{
         max-width: 20%;
     }
-
+    .contenedor-productos-aside{
+        width: 5%;
+        top: 25%; 
+        div{
+            display: none;
+        }
+        .imagen-productos{
+            width: 400%;
+            margin-left: 30px;
+        }
+    }
+    .productos-fila-uno {
+        margin-left: 200px;
+        .mas-vendido-colum-card {
+            font-size: 2vw;
+        }
+        .mas-vendidos-colum-productos {
+            float: right;
+        }
+        .mas-vendido-colum-card-productos{
+            margin-bottom: 20px;
+            figure{
+                img{
+                    max-width: 150px;
+                    height: 200px;
+                }
+                figcaption{
+                    h4{
+                        font-size: 3vw;
+                    }
+                    div{
+                        a{
+                            font-size: 1.5vw;
+                            padding:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .seccion-ayuda{
-        margin-right: 40px;
+        margin: 50px 0 0 20px ;
+        h1{
+            font-size: 5vw;
+        }
+        .seccion-ayuda-texto{
+            @include display(flex,space-evenly);
+            .seccion-ayuda-texto-introduccion{
+                font-size: 3vw;
+                width: 60%;
+            }
+            .seccion-ayuda-texto-enlaces{
+                width: 30%;
+                font-size: 2.5vw;
+                .imagen-contactame{
+                    max-width: 100%;
+                }
+                .container-contactame{
+                    height: 300px;
+                }
+            }
+        }
     }
-    .seccion-ayuda h1{
-        font-size: 180%;
-    }
+    .carrito {
+        h1{
+        font-size: 4vw;
+        }
+        .carrito-container{
+            .carrito-container-izquierda{
+                width: 50%;
+                h3{
+                    font-size: 4vw;
+                }
+                img{
+                    max-width: 80%;
+                }
+                .carrito-container-izquierda-boton{
+                    button{
+                        font-size: 3vw;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .carrito-botones{
+            gap: 40px;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            @include display(flex,center);
+            button{
+                font-size: 2vw;
+            }
+        }
+    }  
+}
+/** MOBILE **/
 
-    .seccion-ayuda-texto{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: space-around;
-    }
+@media only screen and (min-width:320px) and (max-width:768px){
 
-    .seccion-ayuda-texto-introduccion{
-        font-size: 90%;
-        width: 70%;
-    }
-
-    .seccion-ayuda-texto-enlaces{
-        width: 70%;
-        font-size: 90%;
-
-    }
-
-    .grid-container{
-        display: none;
-    }
-
-    .servicios .servicios-img{
-        width: 94%;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 20px;
-        text-align: center;
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .mas-vendidos-colum-card{
-        max-width: calc(50% - 30px);
-    }
-
-    .img-mas-vendido{
-        max-width: 60%;
+    .img-logo{
+        max-width: 80%;
         height: auto;
     }
-
-    .imagenes-secciones img{
-        max-width: 80%;
+    .barra-nav ul li a{
+         font-size: 60%;
     }
-
-    .datos {
-        width: 50%;
+    .opciones-lista-nosotros{
+        margin-left: 20px ;
     }
-
-    .footer-texto{
-        margin-top: 100px
+    .opciones-lista-ayuda{
+        margin-right: 20px;
     }
-
+    .carrousel-texto-estilo h1 strong{
+        font-size: 40%;
+    }
+    .carrousel-texto-papeleria{
+        position: static;
+        margin-right: 300px;
+        margin-top: -90px;
+        width: 70%;
+        h1 strong{
+            font-size: 20%;
+        }
+        h2 strong,
+        h3 strong,
+        h4 strong{
+            font-size: 40%;
+            text-shadow: none;
+        }
+        a{
+            font-size: 20%;
+        }
+    }
+    .contenedor-backround-lapices{
+        @include sizes(100%,700px);
+    }
+    .servicios {
+        .servicios-img {
+            font-size: 3vw;
+            .img-servicio {
+                max-width: 130%;
+            }
+        }
+    }
+    .mas-vendidos{
+        .mas-vendidos-titulo{
+            font-size: 2.5vw;
+        }
+        .mas-vendidos-colum{
+            .mas-vendido-colum-card{
+                font-size: 2vw;
+                figure{
+                    .img-mas-vendido{
+                        @include sizes(100px,100px);
+                    }
+                    figcaption{
+                        h4{
+                            font-size: 2.5vw
+                        }
+                        .mas-vendido-colum-card-boton{
+                            a{
+                                font-size: 1.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .formulario{
+        .formulario-imagen{
+            height: 200px;
+            p{
+                font-size: 3vw;
+            }
+            img{
+                max-width: 150px;
+            }
+        }
+        .datos {
+            @include sizes(40%,250px);
+            .titulo-formulario{
+                font-size: 2vw;
+            }
+            div{
+                input{
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+                label {
+                    font-size: 2.5vw;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .button {
+                    font-size: 2vw;
+                }
+            }
+        }
+    } 
+    footer {
+        .footer-texto {
+            font-size: 3vw;
+        }
+        .footer-editado-boostrap img{
+            max-width: 70px;
+        }
+    }
     .footer-editado-boostrap img{
-        max-width: 10%;
+        max-width: 20%;
     }
-
-    .seccion-ayuda-texto-enlaces{
-        width: 30%;
-        padding: 20px 20px;
+    .contenedor-productos-aside{
+        width: 5%;
+        top: 25%; 
+        div{
+            display: none;
+        }
+        .imagen-productos{
+            width: 400%;
+            margin-left: 30px;
+        }
     }
-
-    .img-mas-vendido {
-        width: 90%;
+    .productos-fila-uno {
+        margin-left: 150px;
+        .mas-vendido-colum-card {
+            font-size: 2vw;
+        }
+        .mas-vendidos-colum-productos {
+            float: right;
+        }
+        .mas-vendido-colum-card-productos{
+            margin-bottom: 20px;
+            figure{
+                img{
+                    max-width: 50px;
+                    height: 100px;
+                }
+                figcaption{
+                    h4{
+                        font-size: 3vw;
+                    }
+                    div{
+                        a{
+                            font-size: 1vw;
+                            padding:0px;
+                        }
+                    }
+                }
+            }
+        }
     }
-
-    .img-servicio{
-        max-width: 90%;
+    .seccion-ayuda{
+        margin: 50px 0 0 20px ;
+        h1{
+            font-size: 5vw;
+        }
+        .seccion-ayuda-texto{
+            @include display(flex,space-evenly);
+            .seccion-ayuda-texto-introduccion{
+                font-size: 3vw;
+                width: 60%;
+            }
+            .seccion-ayuda-texto-enlaces{
+                width: 30%;
+                font-size: 2.5vw;
+                .imagen-contactame{
+                    max-width: 100%;
+                }
+                .container-contactame{
+                    height: 200px;
+                }
+            }
+        }
     }
+    .carrito {
+        h1{
+        font-size: 4vw;
+        }
+        .carrito-container{
+            .carrito-container-izquierda{
+                width: 50%;
+                h3{
+                    font-size: 4vw;
+                }
+                img{
+                    max-width: 80%;
+                }
+                .carrito-container-izquierda-boton{
+                    button{
+                        font-size: 3vw;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .carrito-botones{
+            gap: 40px;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            @include display(flex,center);
+            button{
+                font-size: 2vw;
+            }
+        }
+    }  
 } 

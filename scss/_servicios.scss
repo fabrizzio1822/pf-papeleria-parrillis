@@ -1,14 +1,11 @@
 .contenedor-backround-lapices{
-    background-image: url(/imagenes/fondo-mas-vendidos1.jpg);
+    background-image: url(../imagenes/fondo-mas-vendidos1.jpg);
     background-size: cover; 
     background-position: center;
-    height: 1000px; 
-    width: 100%; 
+    @include sizes(100%,1000px);
 }
-
 .servicios {
     grid-area: servicios;
-    
     .servicios-titulo {
         padding: 40px 0px;
         width: 100%;
@@ -16,27 +13,21 @@
         font-size: 30px;
         color: $color-titulo; 
     }
-
     .servicios-img {
-        display: flex;
-        justify-content: center;
         gap: 40px;
         text-align: center;
         color: #fff;
         font-size: 20px;
-
+        @include display(flex, center);
         div {
-            width: $ancho-img; 
-            height: $altura-img;
             border-radius: $border-radius-img; 
             color: #000000;
+            @include sizes ($ancho-img,$altura-img)
         }
-
         .img-servicio {
             background: $color-fondo-img; 
             max-width: 80%;
-            padding: 10px;
-            border-radius: $border-radius-img; 
+            @include border(10px,none,$border-radius-img)
         }
     }
 }

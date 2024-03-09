@@ -1,6 +1,5 @@
 .seccion-ayuda{
-    margin-top: 50px;
-    margin-left: 50px;
+    margin: 50px 0 0 50px ;
     h1{
         text-align: center;
         width: 100%;
@@ -8,8 +7,7 @@
         color: #9A0101;
     }
     .seccion-ayuda-texto{
-        display: flex;
-        justify-content: space-evenly;
+        @include display(flex,space-evenly);
         .seccion-ayuda-texto-introduccion{
             font-size: 1.3rem;
             text-align: center;
@@ -32,7 +30,7 @@
                 height: 200px;
                 a{
                     background-color: #5f1b32;
-                    color: #fff;
+                    color: $color-botones;
                     padding: 10px 20px;
                     text-decoration: none;
                     border-radius: 20px;

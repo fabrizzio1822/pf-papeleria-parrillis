@@ -6,6 +6,7 @@
     .carrito-container{
         display: flex;
         justify-content: space-evenly;
+        @include display (flex, space-evenly);
         .carrito-container-izquierda{
             text-align: center;
             background-color: #e44611;
@@ -18,9 +19,8 @@
                 border: #e44611 solid 2px;
             }
             .carrito-container-izquierda-boton{
-                display: flex;
-                justify-content: center;
                 gap: 20px;
+                @include display(flex,center);
                 button{
                     border: none;
                     background-color: #9A0101;
@@ -45,11 +45,10 @@
         }
     }
     .carrito-botones{
-        display: flex;
-        justify-content: center;
         gap: 40px;
         margin-top: 80px;
         margin-bottom: 40px;
+        @include display(flex,center);
         button{
             text-decoration: none;
             border: none;

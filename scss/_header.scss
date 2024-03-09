@@ -1,66 +1,44 @@
 .img-logo {
-    width: 150px;
-    height: 200px;
+    @include sizes (150px,200px)
 }
-
 .barra-nav {
     grid-area: barra;
-    display: flex;
-    justify-content: space-evenly;
     background-color: #E31B1B;
-    width: 100%;
-    height: 145px;
+    @include sizes (100%,145px);
+    @include display(flex,space-evenly);
 }
-
 .opciones {
     margin-left: -40px;
-    display: flex;
     text-align: center;
     width: 100%;
-    justify-content: space-evenly;
     list-style: none;
-
+    @include display (flex, space-evenly);
     li {
         a {
             text-decoration: none;
-            color: #fff;
+            color: $color-botones;
             font-size: 22px;
             width: 100%;
         }
     }
-
     .opciones-lista {
-        display: flex;
-        justify-content: center;
         align-items: center;
         list-style-type: none;
         padding: 0;
         height: 160px;
-
-        a {
-            .opciones-backround {
-                background-color: #FF8C1D;
-                border-radius: 30px;
-                padding: 5px 15px;
-            }
+        @include display (flex,center);
+        .opciones-backround {
+            background-color: #FF8C1D;
+            @include border(5px 15px, none, 30px);
         }
-
         .opciones-lista-nosotros a {
             padding-inline: map-get($paddings-navbar, nosotros);
         }
-
         .opciones-lista-ayuda a {
             padding-inline: map-get($paddings-navbar, ayuda);
         }
-
         .opciones-lista-carrito a {
             padding-inline: map-get($paddings-navbar, carrito);
         }
     }
-}
-
-.opciones-backround {
-    background-color: #FF8C1D;
-    border-radius: 30px;
-    padding: 5px 15px;
 }
