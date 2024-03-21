@@ -3,7 +3,7 @@
 }
 .barra-nav {
     grid-area: barra;
-    background-color: #E31B1B;
+    background-color: $color-bordo;
     @include sizes (100%,145px);
     @include display(flex,space-evenly);
 }
@@ -19,6 +19,7 @@
             color: $color-botones;
             font-size: 22px;
             width: 100%;
+            
         }
     }
     .opciones-lista {
@@ -28,8 +29,13 @@
         height: 160px;
         @include display (flex,center);
         .opciones-backround {
-            background-color: #FF8C1D;
+            background-color: #e44611;
             @include border(5px 15px, none, 30px);
+            transition: background-color 1s;
+            &:hover{
+                background-color: #e62300;
+                transition: background-color 1s;
+            }
         }
         .opciones-lista-nosotros a {
             padding-inline: map-get($paddings-navbar, nosotros);

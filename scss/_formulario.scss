@@ -1,10 +1,16 @@
 .formulario{
     grid-area: form;
-    margin-top: 40px;
+    background-image: url("../imagenes/formulario.fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
     padding-bottom: 50px;
     @include display(flex,center);
     .formulario-imagen{
-        padding: 30px;
+        background-color: #fff;
+        border-radius: 30px;
+        padding-inline: 30px;
         text-align: center;
         height: 300px;
         p{
@@ -19,7 +25,7 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #9A0101;
+        background-color: rgb(141, 1, 1, 0.9);
         @include sizes(25%,300px);
         .titulo-formulario{
             font-size: 20px;
@@ -27,26 +33,28 @@
         }
         div{
             input{
-                padding: 10px;
-                border-radius: 5px;
+                padding: 5px;
+                border-radius: 30px;
                 border: 1px solid $color-botones;
                 margin-bottom: 10px;
                 width: 90%;
             }
             label {
+                margin-top: 10px;
                 color: #fff;
                 font-weight: bold;
-                margin-bottom: 5px;
+                margin-bottom: 10px;
             }
             .button {
                 font-size: 1.2rem;
-                padding: 10px 20px;
-                background-color: #9A0101;
+                padding: 5px 20px;
+                background-color: #4c0026;
                 color: $color-botones;
                 border: none;
                 border-radius: 20px;
                 cursor: pointer;
                 transition: background-color 0.3s;
+                margin-top: 20px;
             }
         }
     }

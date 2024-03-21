@@ -4,7 +4,7 @@
     background-color: #c7c7c7;
     h2{
         color: #5f1b32;
-        font-size: 40px;
+        font-size: clamp(10px, 3vw, 50px);
         font-style: italic;
     }
     .marcas-logos{
@@ -12,6 +12,9 @@
         img {
             filter: grayscale(100%);
             transition: filter 0.5s ease; 
+            &:hover{
+                filter: grayscale(0%);
+            }
         }
         .marcas-logos-papeleria{
             width: 100%;

@@ -1,22 +1,19 @@
 footer {
+    background-color: #565656;
     grid-area: footer;
     display: inline-block;
     width: 100%;
+    padding: 10px 0;
     text-align: center; 
     .footer-texto {
-        color: #ff4500;
+        color: #fff;
         font-size: 20px;
     }
-    .img-footer {
-        max-width: 50px;
-        padding: 20px;
-    }
     .footer-editado-boostrap img{
-        max-width: 100px;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 20px;
+        background-color: #fff;
+        max-width: 50px;
     }
 }
-
-
-
-
-

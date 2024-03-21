@@ -1,13 +1,10 @@
 // CONTIENE MI MENU PRINCIPAL
-
 //reset
 @import "./reset/vars";
 @import "./reset/reset";
-
 @import "./reset/mixin";
 @import "./reset/maps";
 @import "./reset/layout";
-
 //estructura
 @import "header";
 @import "principal";
@@ -16,19 +13,10 @@
 @import "marcas";
 @import "formulario";
 @import "footer";
-
-
 //paginas
-
-@import "./producto/aside";
-@import "./producto/productos";
-
-@import "./nosotros/nosotros";
-
-@import "./ayuda/ayuda";
-
-@import "./carrito/carrito";
-
+@import "productos";
+@import "nosotros";
+@import "ayuda";
+@import "carrito";
 // media queries
-
 @import "mediaqueries";

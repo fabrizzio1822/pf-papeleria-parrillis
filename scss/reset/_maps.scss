@@ -3,7 +3,6 @@ $paddings-navbar:(
     ayuda:32px,
     carrito: 26px
 );
-
 @each $enlace,$padding in $paddings-navbar{
     k__#{$enlace}{
         padding-inline:$padding 

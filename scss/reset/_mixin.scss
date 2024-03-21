@@ -2,17 +2,14 @@
     height: $height;
     width: $width;
 } 
-
 @mixin display($display , $justify){
     display: $display;
     justify-content: $justify;
 }
-
 @mixin posicion($top,$left){
     top: $top;
     left: $left;
 }
-
 @mixin border($padding,$border,$radius){
     padding: $padding;
     border: $border;

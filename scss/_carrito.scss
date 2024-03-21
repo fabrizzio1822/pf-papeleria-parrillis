@@ -1,0 +1,55 @@
+.carrito{
+    h1{
+        margin-top: 20px;
+        text-align: center;
+        color: $color-bordo;
+    }
+    table{
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        thead{
+            margin-top: 30px;
+            tr{
+                .table-imagen{
+                    padding-left: 100px;
+                }
+                .table-descripcion{
+                    padding-left: 180px;
+                }  
+                .table-cantidad{
+                    padding-left: 95px ;
+                }
+                .table-precio{
+                    padding-left: 100px ;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    text-align: center;
+                    padding-inline: 50px;
+                    border: 2px solid #c7c7c7;
+                    img{
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+.pagar{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    button{
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        color: #fff;
+        background-color: red;
+        border-radius: 20px;
+    }
+}

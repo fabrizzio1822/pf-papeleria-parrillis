@@ -9,29 +9,39 @@
         padding: 30px;
     }
     .mas-vendidos-colum{
+        flex-wrap: wrap;
         margin: 0 10px;
-        @include display (flex,space-evenly);
+        @include display (flex,center);
+        gap: 20px;
         .mas-vendido-colum-card{
-            background: #ff4500;
+            width: 20%;
+            box-shadow: 0 2px 4px rgba(1, 0, 0, 1);
+            background-color: #5f1b32;
             text-align: center;
             border-radius: 30px;
             color: #fff;
             figure{
                 .img-mas-vendido{
-                    border: solid 5px #ff4500;
                     border-radius: 30px;
-                    @include sizes(300px,250px);
+                    @include sizes(200px,175px);
                 }
                 figcaption{
+                    padding: 0 10px;
+                    h4{
+                        font-size: clamp(20px, 1vw, 60px);
+                    }
+                    p{
+                        font-size: clamp(10px, 1vw, 40px);
+                    }
                     .mas-vendido-colum-card-boton{
                         @include display (flex, space-evenly);
                         a{
-                            background-color: #e44611;
+                            background-color: #9A0101;
                             text-decoration: none;
                             color: $color-botones;
-                            padding: 10px;
+                            padding: 5px;
                             border-radius: 20px;
-                            font-size: 1rem;
+                            font-size: clamp(10px, 1vw, 40px);
                             transition: background-color 1s;
                         }
                     }

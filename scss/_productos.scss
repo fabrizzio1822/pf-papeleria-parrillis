@@ -1,0 +1,45 @@
+.productos-fila-uno {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 40px;
+    @include display(flex,space-evenly);
+    .mas-vendido-colum-card {
+        width: 23%;
+        background-color: #5f1b32;
+        color: #fff;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(1, 1, 1, 5);
+        h1{
+            font-size: clamp(10px, 2vw, 50px);
+        }
+    }
+    .mas-vendidos-colum-productos {
+        float: right;
+    }
+    .mas-vendido-colum-card-productos{
+        margin-bottom: 20px;
+        figure{
+            img{
+                max-width: 100%;
+                height: 300px;
+                border: none;
+                margin-top: -10px;
+                margin-bottom: 10px;
+                border-radius: 30px;
+            }
+            figcaption{
+                div{
+                    a{
+                        background-color: #9A0101;
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        margin: 0 5px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

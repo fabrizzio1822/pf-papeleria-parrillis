@@ -31,7 +31,7 @@ body {
 
 .barra-nav {
   grid-area: barra;
-  background-color: #E31B1B;
+  background-color: #9A0101;
   height: 145px;
   width: 100%;
   display: flex;
@@ -61,10 +61,15 @@ body {
   justify-content: center;
 }
 .opciones .opciones-lista .opciones-backround {
-  background-color: #FF8C1D;
+  background-color: #e44611;
   padding: 5px 15px;
   border: none;
   border-radius: 30px;
+  transition: background-color 1s;
+}
+.opciones .opciones-lista .opciones-backround:hover {
+  background-color: #e62300;
+  transition: background-color 1s;
 }
 .opciones .opciones-lista .opciones-lista-nosotros a {
   padding-inline: 21px;
@@ -77,8 +82,11 @@ body {
 }
 
 .banner-container {
-  position: relative;
   width: 100%;
+}
+.banner-container .banner-papeleria,
+.banner-container .banner-jugueteria {
+  filter: brightness(0.5);
 }
 .banner-container .carrousel-texto-papeleria {
   position: absolute;
@@ -88,24 +96,30 @@ body {
   color: white;
 }
 .banner-container .carrousel-texto-papeleria h1 {
-  font-size: 100px;
+  font-size: clamp(20px, 6vw, 100px);
   color: #9A0101;
   text-shadow: 5px 10px 15px #fff;
 }
 .banner-container .carrousel-texto-papeleria h2 strong,
 .banner-container .carrousel-texto-papeleria h3 strong,
 .banner-container .carrousel-texto-papeleria h4 strong {
-  text-shadow: 5px 10px 5px #9A0101;
+  font-size: clamp(15px, 2.5vw, 50px);
+  text-shadow: 5px 5px 5px #9A0101;
 }
 .banner-container .carrousel-texto-papeleria a {
+  line-height: 3;
   text-decoration: none;
   color: #ffffff;
   background-color: #9A0101;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: clamp(10px, 2vw, 50px);
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
+  transition: background-color 1s;
+}
+.banner-container .carrousel-texto-papeleria a:hover {
+  background-color: #5f1b32;
+  transition: background-color 1s;
 }
 .banner-container .carrousel-texto-jugueteria {
   width: 50%;
@@ -117,30 +131,37 @@ body {
 }
 .banner-container .carrousel-texto-jugueteria h1 {
   text-decoration: double;
-  font-size: 100px;
+  font-size: clamp(20px, 6vw, 100px);
   color: #5f1b32;
   text-shadow: 0px 0px 20px #fff;
 }
 .banner-container .carrousel-texto-jugueteria h2 strong,
 .banner-container .carrousel-texto-jugueteria h3 strong,
 .banner-container .carrousel-texto-jugueteria h4 strong {
+  font-size: clamp(15px, 2.5vw, 50px);
   text-shadow: 5px -5px 5px #5f1b32;
 }
 .banner-container .carrousel-texto-jugueteria a {
+  line-height: 3;
   text-decoration: none;
   color: #ffffff;
   background-color: #5f1b32;
-  font-size: 20px;
+  font-size: clamp(10px, 2vw, 50px);
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
+  transition: background-color 1s;
+}
+.banner-container .carrousel-texto-jugueteria a:hover {
+  background-color: #9A0101;
+  transition: background-color 1s;
 }
 
 .contenedor-backround-lapices {
   background-image: url(../imagenes/fondo-mas-vendidos1.jpg);
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  height: 850px;
   width: 100%;
 }
 
@@ -188,33 +209,45 @@ body {
   padding: 30px;
 }
 .mas-vendidos .mas-vendidos-colum {
+  flex-wrap: wrap;
   margin: 0 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
 }
 .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card {
-  background: #ff4500;
+  width: 20%;
+  box-shadow: 0 2px 4px rgb(1, 0, 0);
+  background-color: #5f1b32;
   text-align: center;
   border-radius: 30px;
   color: #fff;
 }
 .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure .img-mas-vendido {
-  border: solid 5px #ff4500;
   border-radius: 30px;
-  height: 250px;
-  width: 300px;
+  height: 175px;
+  width: 200px;
+}
+.mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption {
+  padding: 0 10px;
+}
+.mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption h4 {
+  font-size: clamp(20px, 1vw, 60px);
+}
+.mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption p {
+  font-size: clamp(10px, 1vw, 40px);
 }
 .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption .mas-vendido-colum-card-boton {
   display: flex;
   justify-content: space-evenly;
 }
 .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption .mas-vendido-colum-card-boton a {
-  background-color: #e44611;
+  background-color: #9A0101;
   text-decoration: none;
   color: #ffffff;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: clamp(10px, 1vw, 40px);
   transition: background-color 1s;
 }
 
@@ -225,7 +258,7 @@ body {
 }
 .marcas h2 {
   color: #5f1b32;
-  font-size: 40px;
+  font-size: clamp(10px, 3vw, 50px);
   font-style: italic;
 }
 .marcas .marcas-logos {
@@ -234,6 +267,9 @@ body {
 .marcas .marcas-logos img {
   filter: grayscale(100%);
   transition: filter 0.5s ease;
+}
+.marcas .marcas-logos img:hover {
+  filter: grayscale(0%);
 }
 .marcas .marcas-logos .marcas-logos-papeleria {
   width: 100%;
@@ -250,13 +286,19 @@ body {
 
 .formulario {
   grid-area: form;
-  margin-top: 40px;
+  background-image: url("../imagenes/formulario.fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 40px;
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 .formulario .formulario-imagen {
-  padding: 30px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding-inline: 30px;
   text-align: center;
   height: 300px;
 }
@@ -271,7 +313,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #9A0101;
+  background-color: rgba(141, 1, 1, 0.9);
   height: 300px;
   width: 25%;
 }
@@ -280,83 +322,67 @@ body {
   color: #fff;
 }
 .formulario .datos div input {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 30px;
   border: 1px solid #ffffff;
   margin-bottom: 10px;
   width: 90%;
 }
 .formulario .datos div label {
+  margin-top: 10px;
   color: #fff;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .formulario .datos div .button {
   font-size: 1.2rem;
-  padding: 10px 20px;
-  background-color: #9A0101;
+  padding: 5px 20px;
+  background-color: #4c0026;
   color: #ffffff;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
 footer {
+  background-color: #565656;
   grid-area: footer;
   display: inline-block;
   width: 100%;
+  padding: 10px 0;
   text-align: center;
 }
 footer .footer-texto {
-  color: #ff4500;
+  color: #fff;
   font-size: 20px;
 }
-footer .img-footer {
-  max-width: 50px;
-  padding: 20px;
-}
 footer .footer-editado-boostrap img {
-  max-width: 100px;
-}
-
-.contenedor-productos-aside {
-  background-color: #fff;
-  position: fixed;
-  top: 20%;
-  left: 20px;
-  z-index: 1000;
-}
-.contenedor-productos-aside div .buscador input {
-  border-radius: 20px;
-  border: solid 1px #5f1b32;
-}
-.contenedor-productos-aside div .boton-aside {
-  border: none;
-  border-radius: 20px;
   padding: 10px;
-  background-color: #9A0101;
-  color: #fff;
-  margin: 10px 40px;
-}
-.contenedor-productos-aside .imagen-productos {
-  max-width: 200px;
-  margin-left: 30px;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: #fff;
+  max-width: 50px;
 }
 
 .productos-fila-uno {
   flex-wrap: wrap;
+  width: 100%;
   margin-top: 40px;
-  margin-left: 300px;
   display: flex;
   justify-content: space-evenly;
 }
 .productos-fila-uno .mas-vendido-colum-card {
-  width: 26%;
+  width: 23%;
   background-color: #5f1b32;
   color: #fff;
   text-align: center;
   border-radius: 20px;
+  box-shadow: 0 2px 4px rgb(1, 1, 1);
+}
+.productos-fila-uno .mas-vendido-colum-card h1 {
+  font-size: clamp(10px, 2vw, 50px);
 }
 .productos-fila-uno .mas-vendidos-colum-productos {
   float: right;
@@ -365,10 +391,10 @@ footer .footer-editado-boostrap img {
   margin-bottom: 20px;
 }
 .productos-fila-uno .mas-vendido-colum-card-productos figure img {
-  margin-top: -10px;
-  max-width: 340px;
-  height: 350px;
+  max-width: 100%;
+  height: 300px;
   border: none;
+  margin-top: -10px;
   margin-bottom: 10px;
   border-radius: 30px;
 }
@@ -422,7 +448,8 @@ footer .footer-editado-boostrap img {
   background-color: #e44611;
   border-radius: 30px;
   box-shadow: 0 0 20px rgb(0, 0, 0);
-  height: 200px;
+  height: 280px;
+  margin-bottom: 20px;
 }
 .seccion-ayuda .seccion-ayuda-texto .seccion-ayuda-texto-enlaces .container-contactame a {
   background-color: #5f1b32;
@@ -434,128 +461,61 @@ footer .footer-editado-boostrap img {
 }
 
 .carrito h1 {
+  margin-top: 20px;
   text-align: center;
-  font-size: 2.5rem;
+  color: #9A0101;
 }
-.carrito .carrito-container {
-  display: flex;
-  justify-content: space-evenly;
-  display: flex;
-  justify-content: space-evenly;
+.carrito table {
+  display: grid;
+  justify-content: center;
+  width: 100%;
 }
-.carrito .carrito-container .carrito-container-izquierda {
+.carrito table thead {
+  margin-top: 30px;
+}
+.carrito table thead tr .table-imagen {
+  padding-left: 100px;
+}
+.carrito table thead tr .table-descripcion {
+  padding-left: 180px;
+}
+.carrito table thead tr .table-cantidad {
+  padding-left: 95px;
+}
+.carrito table thead tr .table-precio {
+  padding-left: 100px;
+}
+.carrito table tbody tr td {
   text-align: center;
-  background-color: #e44611;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: #fff;
+  padding-inline: 50px;
+  border: 2px solid #c7c7c7;
 }
-.carrito .carrito-container .carrito-container-izquierda img {
-  max-width: 300px;
-  border-radius: 30px;
-  border: #e44611 solid 2px;
+.carrito table tbody tr td img {
+  max-width: 150px;
 }
-.carrito .carrito-container .carrito-container-izquierda .carrito-container-izquierda-boton {
-  gap: 20px;
+
+.pagar {
+  padding: 30px;
   display: flex;
   justify-content: center;
 }
-.carrito .carrito-container .carrito-container-izquierda .carrito-container-izquierda-boton button {
-  border: none;
-  background-color: #9A0101;
+.pagar button {
   padding: 10px 20px;
-  border-radius: 20px;
-  color: #fff;
-  transition: background-color 1s;
-}
-.carrito .carrito-container .carrito-container-derecha {
-  display: flex;
-  flex-direction: column;
-  border: #e44611 solid 2px;
-  width: 20%;
-  border-radius: 20px;
-}
-.carrito .carrito-container .carrito-container-derecha h3 {
   text-align: center;
-  margin-bottom: 0;
-  flex-grow: 1;
-}
-.carrito .carrito-botones {
-  gap: 40px;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-}
-.carrito .carrito-botones button {
   text-decoration: none;
   border: none;
   color: #fff;
-  background-color: #5f1b32;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: 1rem;
-  transition: background-color 1s;
-}
-.carrito .carrito-botones button a {
-  text-decoration: none;
-  color: #fff;
+  background-color: red;
+  border-radius: 20px;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .img-logo {
-    max-width: 80%;
-    height: auto;
-  }
-  .barra-nav ul li a {
-    font-size: 60%;
-  }
-  .opciones-lista-nosotros {
-    margin-left: 20px;
-  }
-  .opciones-lista-ayuda {
-    margin-right: 20px;
-  }
-  .carrousel-texto-estilo h1 strong {
-    font-size: 40%;
-  }
-  .carrousel-texto-papeleria {
-    position: static;
-    margin-right: 300px;
-    margin-top: -90px;
-    width: 70%;
-  }
-  .carrousel-texto-papeleria h1 strong {
-    font-size: 20%;
-  }
-  .carrousel-texto-papeleria h2 strong,
-  .carrousel-texto-papeleria h3 strong,
-  .carrousel-texto-papeleria h4 strong {
-    font-size: 40%;
-    text-shadow: none;
-  }
-  .carrousel-texto-papeleria a {
-    font-size: 20%;
-  }
-  .contenedor-backround-lapices {
-    height: 800px;
-    width: 100%;
-  }
-  .servicios .servicios-img {
-    font-size: 3vw;
-  }
-  .servicios .servicios-img .img-servicio {
-    max-width: 130%;
-  }
-  .mas-vendidos .mas-vendidos-titulo {
-    font-size: 2.5vw;
-  }
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card {
     font-size: 2vw;
   }
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure .img-mas-vendido {
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 100%;
   }
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption h4 {
     font-size: 2.5vw;
@@ -564,16 +524,17 @@ footer .footer-editado-boostrap img {
     font-size: 1.5vw;
   }
   .formulario .formulario-imagen {
-    height: 200px;
+    height: auto;
   }
   .formulario .formulario-imagen p {
+    margin-top: 40px;
     font-size: 3vw;
   }
   .formulario .formulario-imagen img {
     max-width: 150px;
   }
   .formulario .datos {
-    height: 300px;
+    height: auto;
     width: 40%;
   }
   .formulario .datos .titulo-formulario {
@@ -601,39 +562,11 @@ footer .footer-editado-boostrap img {
   .footer-editado-boostrap img {
     max-width: 20%;
   }
-  .contenedor-productos-aside {
-    width: 5%;
-    top: 25%;
-  }
-  .contenedor-productos-aside div {
-    display: none;
-  }
-  .contenedor-productos-aside .imagen-productos {
-    width: 400%;
-    margin-left: 30px;
-  }
-  .productos-fila-uno {
-    margin-left: 200px;
-  }
   .productos-fila-uno .mas-vendido-colum-card {
-    font-size: 2vw;
-  }
-  .productos-fila-uno .mas-vendidos-colum-productos {
-    float: right;
-  }
-  .productos-fila-uno .mas-vendido-colum-card-productos {
-    margin-bottom: 20px;
+    width: 30%;
   }
   .productos-fila-uno .mas-vendido-colum-card-productos figure img {
-    max-width: 150px;
-    height: 200px;
-  }
-  .productos-fila-uno .mas-vendido-colum-card-productos figure figcaption h4 {
-    font-size: 3vw;
-  }
-  .productos-fila-uno .mas-vendido-colum-card-productos figure figcaption div a {
-    font-size: 1.5vw;
-    padding: 5px;
+    margin-top: -10px;
   }
   .seccion-ayuda {
     margin: 50px 0 0 20px;
@@ -658,72 +591,68 @@ footer .footer-editado-boostrap img {
   }
   .seccion-ayuda .seccion-ayuda-texto .seccion-ayuda-texto-enlaces .container-contactame {
     height: 300px;
-  }
-  .carrito h1 {
-    font-size: 4vw;
-  }
-  .carrito .carrito-container .carrito-container-izquierda {
-    width: 50%;
-  }
-  .carrito .carrito-container .carrito-container-izquierda h3 {
-    font-size: 4vw;
-  }
-  .carrito .carrito-container .carrito-container-izquierda img {
-    max-width: 80%;
-  }
-  .carrito .carrito-container .carrito-container-izquierda .carrito-container-izquierda-boton button {
-    font-size: 3vw;
-    padding: 10px;
-  }
-  .carrito .carrito-botones {
-    gap: 40px;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-  }
-  .carrito .carrito-botones button {
-    font-size: 2vw;
   }
 }
 /** MOBILE **/
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .img-logo {
-    max-width: 80%;
-    height: auto;
+    height: 100px;
+    width: 75px;
   }
-  .barra-nav ul li a {
-    font-size: 60%;
+  .barra-nav {
+    height: 80px;
+    width: 100%;
   }
-  .opciones-lista-nosotros {
-    margin-left: 20px;
+  .opciones li a {
+    margin-inline: 2px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2vw;
+    width: 100%;
   }
-  .opciones-lista-ayuda {
-    margin-right: 20px;
+  .banner-container .carrousel-texto-papeleria h1 {
+    line-height: 0.5;
   }
-  .carrousel-texto-estilo h1 strong {
-    font-size: 40%;
+  .banner-container .carrousel-texto-papeleria h2,
+  .banner-container .carrousel-texto-papeleria h3,
+  .banner-container .carrousel-texto-papeleria h4 {
+    line-height: 0.5;
   }
-  .carrousel-texto-papeleria {
-    position: static;
-    margin-right: 300px;
-    margin-top: -90px;
-    width: 70%;
+  .banner-container .carrousel-texto-papeleria h2 strong,
+  .banner-container .carrousel-texto-papeleria h3 strong,
+  .banner-container .carrousel-texto-papeleria h4 strong {
+    font-size: clamp(11px, 2vw, 30px);
   }
-  .carrousel-texto-papeleria h1 strong {
-    font-size: 20%;
+  .banner-container .carrousel-texto-papeleria a {
+    line-height: 3;
+    font-size: clamp(5px, 2vw, 30px);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
   }
-  .carrousel-texto-papeleria h2 strong,
-  .carrousel-texto-papeleria h3 strong,
-  .carrousel-texto-papeleria h4 strong {
-    font-size: 40%;
-    text-shadow: none;
+  .banner-container .carrousel-texto-jugueteria h1 {
+    line-height: 0.5;
   }
-  .carrousel-texto-papeleria a {
-    font-size: 20%;
+  .banner-container .carrousel-texto-jugueteria h2,
+  .banner-container .carrousel-texto-jugueteria h3,
+  .banner-container .carrousel-texto-jugueteria h4 {
+    line-height: 0.5;
+  }
+  .banner-container .carrousel-texto-jugueteria h2 strong,
+  .banner-container .carrousel-texto-jugueteria h3 strong,
+  .banner-container .carrousel-texto-jugueteria h4 strong {
+    font-size: clamp(11px, 2vw, 30px);
+  }
+  .banner-container .carrousel-texto-jugueteria a {
+    line-height: 3;
+    font-size: clamp(5px, 2vw, 30px);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
   }
   .contenedor-backround-lapices {
-    height: 700px;
+    height: auto;
     width: 100%;
   }
   .servicios .servicios-img {
@@ -732,15 +661,16 @@ footer .footer-editado-boostrap img {
   .servicios .servicios-img .img-servicio {
     max-width: 130%;
   }
-  .mas-vendidos .mas-vendidos-titulo {
-    font-size: 2.5vw;
+  .mas-vendidos {
+    margin-top: -30px;
+    padding-bottom: 50px;
   }
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card {
-    font-size: 2vw;
+    width: 34%;
   }
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure .img-mas-vendido {
-    height: 100px;
-    width: 100px;
+    max-width: 100%;
+    height: auto;
   }
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption h4 {
     font-size: 2.5vw;
@@ -748,18 +678,23 @@ footer .footer-editado-boostrap img {
   .mas-vendidos .mas-vendidos-colum .mas-vendido-colum-card figure figcaption .mas-vendido-colum-card-boton a {
     font-size: 1.5vw;
   }
+  .marcas {
+    margin-top: -40px;
+  }
   .formulario .formulario-imagen {
-    height: 200px;
+    margin-top: 50px;
+    width: 50%;
+    height: 100%;
   }
   .formulario .formulario-imagen p {
     font-size: 3vw;
   }
   .formulario .formulario-imagen img {
-    max-width: 150px;
+    max-width: 80%;
   }
   .formulario .datos {
-    height: 250px;
-    width: 40%;
+    height: auto;
+    width: 50%;
   }
   .formulario .datos .titulo-formulario {
     font-size: 2vw;
@@ -781,26 +716,11 @@ footer .footer-editado-boostrap img {
     font-size: 3vw;
   }
   footer .footer-editado-boostrap img {
-    max-width: 70px;
-  }
-  .footer-editado-boostrap img {
-    max-width: 20%;
-  }
-  .contenedor-productos-aside {
-    width: 5%;
-    top: 25%;
-  }
-  .contenedor-productos-aside div {
-    display: none;
-  }
-  .contenedor-productos-aside .imagen-productos {
-    width: 400%;
-    margin-left: 30px;
-  }
-  .productos-fila-uno {
-    margin-left: 150px;
+    max-width: 7%;
+    padding: 1px;
   }
   .productos-fila-uno .mas-vendido-colum-card {
+    width: 40%;
     font-size: 2vw;
   }
   .productos-fila-uno .mas-vendidos-colum-productos {
@@ -810,15 +730,11 @@ footer .footer-editado-boostrap img {
     margin-bottom: 20px;
   }
   .productos-fila-uno .mas-vendido-colum-card-productos figure img {
-    max-width: 50px;
-    height: 100px;
-  }
-  .productos-fila-uno .mas-vendido-colum-card-productos figure figcaption h4 {
-    font-size: 3vw;
+    max-width: 80%;
+    height: auto;
   }
   .productos-fila-uno .mas-vendido-colum-card-productos figure figcaption div a {
-    font-size: 1vw;
-    padding: 0px;
+    font-size: 2vw;
   }
   .seccion-ayuda {
     margin: 50px 0 0 20px;
@@ -835,6 +751,7 @@ footer .footer-editado-boostrap img {
     width: 60%;
   }
   .seccion-ayuda .seccion-ayuda-texto .seccion-ayuda-texto-enlaces {
+    line-height: 2;
     width: 30%;
     font-size: 2.5vw;
   }
@@ -842,33 +759,52 @@ footer .footer-editado-boostrap img {
     max-width: 100%;
   }
   .seccion-ayuda .seccion-ayuda-texto .seccion-ayuda-texto-enlaces .container-contactame {
-    height: 200px;
+    height: auto;
+  }
+  .seccion-historia {
+    font-size: 70%;
   }
   .carrito h1 {
-    font-size: 4vw;
+    font-size: 6vw;
   }
-  .carrito .carrito-container .carrito-container-izquierda {
-    width: 50%;
-  }
-  .carrito .carrito-container .carrito-container-izquierda h3 {
-    font-size: 4vw;
-  }
-  .carrito .carrito-container .carrito-container-izquierda img {
-    max-width: 80%;
-  }
-  .carrito .carrito-container .carrito-container-izquierda .carrito-container-izquierda-boton button {
+  .carrito table {
+    margin-left: 20px;
+    width: 90%;
+    display: grid;
+    justify-content: center;
     font-size: 3vw;
+  }
+  .carrito table thead {
+    font-size: 0;
+    margin-top: 30px;
+  }
+  .carrito table thead tr .table-imagen {
+    padding-left: 0;
+  }
+  .carrito table thead tr .table-descripcion {
+    padding-left: 0px;
+  }
+  .carrito table thead tr .table-cantidad {
+    padding-left: 0px;
+  }
+  .carrito table thead tr .table-precio {
+    padding-left: 0px;
+  }
+  .carrito table tbody tr {
+    height: auto;
+  }
+  .carrito table tbody tr td {
+    padding-inline: 0px;
+  }
+  .carrito table tbody tr td img {
+    max-width: 40%;
+    padding-block: 10px;
+  }
+  .pagar {
     padding: 10px;
   }
-  .carrito .carrito-botones {
-    gap: 40px;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-  }
-  .carrito .carrito-botones button {
-    font-size: 2vw;
+  .pagar button {
+    padding: 5px 10px;
   }
 }
 

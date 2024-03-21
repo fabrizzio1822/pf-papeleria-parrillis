@@ -2,7 +2,7 @@
     background-image: url(../imagenes/fondo-mas-vendidos1.jpg);
     background-size: cover; 
     background-position: center;
-    @include sizes(100%,1000px);
+    @include sizes(100%,850px);
 }
 .servicios {
     grid-area: servicios;
@@ -31,6 +31,3 @@
         }
     }
 }
-
-
-

@@ -1,0 +1,43 @@
+.seccion-ayuda{
+    margin: 50px 0 0 50px ;
+    h1{
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        color: #9A0101;
+    }
+    .seccion-ayuda-texto{
+        @include display(flex,space-evenly);
+        .seccion-ayuda-texto-introduccion{
+            font-size: 1.3rem;
+            text-align: center;
+            width: 50%;
+            color: #9A0101;
+        }
+        .seccion-ayuda-texto-enlaces{
+            width: 20%;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #fff;
+            .imagen-contactame{
+                max-width: 300px;
+            }
+            .container-contactame{
+                padding: 20px 0;
+                background-color: #e44611;
+                border-radius: 30px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+                height: 280px;
+                margin-bottom: 20px;
+                a{
+                    background-color: #5f1b32;
+                    color: $color-botones;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border-radius: 20px;
+                    transition: background-color 1s;
+                }
+            }
+        }
+    }
+}
